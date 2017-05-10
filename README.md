@@ -15,7 +15,7 @@ The Word Definer will allow users to enter any word of their choosing and attach
 * In your preferred browser,type in localhost:4567
 
 ## Support and contact details
-View the app on Heroku: https://word-definer.herokuapp.com/
+View the app on Heroku: https://theworddefiner.herokuapp.com/
 If any issues occur contact me at dansamueljacob@gmail.com
 
 ## Technologies Used
