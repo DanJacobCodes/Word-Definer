@@ -20,3 +20,22 @@ post('/') do
  @words = Word.all()
  erb(:index)
 end
+
+get('/:id') do
+  @word = Word.find(params.fetch('id').to_i())
+  erb(:word)
+end
+
+get('/:id/definitions/new') do
+  @word = Word.find(params.fetch('id').to_i())
+  erb(:definition_form)
+end
+
+post('/:id') do
+  word = Word.find(params.fetch('id').to_i())
+  @word = word
+  defined_word = params.fetch('defined_word')
+  @definition = Definition.new({:defined_word => defined_word})
+  word.add_definition(@definition)
+  erb(:word)
+end

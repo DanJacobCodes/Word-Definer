@@ -1,0 +1,14 @@
+<a href="/">Home</a>
+ <ul>
+   <li><a href="/<%= @word.id %>"><%= @word.word %></a></li>
+ </ul>
+
+<h2>Add a new definition</h2>
+
+ <h1>Your word being defined: <%= @word.word %></h1>
+
+ <form action="/<%= @word.id %>" method="post">
+   <label for="defined_word">Definition:</label>
+   <input id="defined_word" name="defined_word" type="text">
+   <button type="submit" class="btn btn-primary">Add Definition</button>
+ </form>
